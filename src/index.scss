@@ -1,0 +1,23 @@
+@import 'variables';
+
+body {
+  margin: 0;
+  color: $text-color;
+  background: $main-bg-color;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}

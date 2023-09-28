@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.ticket {
+    background-color: $element-bg-color;
+    padding: 12px;
+    border-radius: $border-radius;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: $contrast-text-color;
+}
+
+.flight {
+    padding: 12px 0;
+    display: flex;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    width: 33%;
+}
+
+.label {
+    color: $sub-text-color;
+}

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import styles from './App.module.scss';
+import Logo from './components/logo';
+import MainFilter from './components/mainFilter';
+import Tickets from './components/tickets';
+import { fetchAllTickets } from './redux/ticketsSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAllTickets());
+  }, [dispatch]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className={styles.header}>
+        <Logo />
       </header>
+      <main>
+        <MainFilter />
+        <Tickets />
+      </main>
     </div>
   );
 }
